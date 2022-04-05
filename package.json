@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "@babel/node": "^7.4.5",
-    "cod-scripts": "^3.3.0",
-    "markdownlint-cli": "^0.17.0",
+    "cod-scripts": "^10.0.0",
+    "markdownlint-cli": "^0.31.1",
     "pkg": "^4.4.0",
-    "semantic-release": "^15.13.16"
+    "semantic-release": "^19.0.2"
   },
   "scripts": {
     "build": "cod-scripts build -d build --copy-files && pkg --targets=node12-macos,node12-linux --out-path=dist .",
@@ -26,7 +26,8 @@
     "lint": "cod-scripts lint",
     "lint:md": "markdownlint -i node_modules -i dist .",
     "lint:commit": "cod-scripts commitlint",
-    "validate": "cod-scripts validate"
+    "validate": "cod-scripts validate",
+    "prepare": "husky install"
   },
   "bin": {
     "dotdocker": "./bin/dotdocker.js"
